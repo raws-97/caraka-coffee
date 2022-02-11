@@ -6,6 +6,8 @@
 /* =================================== */
 /*  Basic Style 
 /* =================================== */
+.invert { filter: invert(100%); }
+
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #b68834;

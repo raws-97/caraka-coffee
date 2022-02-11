@@ -269,10 +269,105 @@ $(document).ready(function(){
         });      
 
 
-
-
-
-
-
-
  });
+
+   /**
+   * Easy selector helper function
+   */
+  function displayTo(id, value){
+   return document.getElementById(id).style.display = value
+  }
+
+    const select = (el, all = false) => {
+      el = el.trim()
+      if (all) {
+        return [...document.querySelectorAll(el)]
+      } else {
+        return document.querySelector(el)
+      }
+    }
+  
+    /**
+     * Easy event listener function
+     */
+     const on = (type, el, listener, all = false) => {
+      if (all) {
+        select(el, all).forEach(e => e.addEventListener(type, listener))
+      } else {
+        select(el, all).addEventListener(type, listener)
+      }
+    }
+  
+  
+ window.addEventListener('load', () => {
+  let portfolioContainer = select('.portfolio-container');
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'fitRows'
+    });
+
+    let portfolioFilters = select('#portfolio-flters div button', true);
+
+    on('click', '#portfolio-flters div button', function(e) {
+      e.preventDefault();
+      portfolioFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      portfolioIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      aos_init();
+    }, true);
+  }
+
+});
+
+/**
+ * Animation on scroll
+ */
+ function aos_init() {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false
+  });
+}
+window.addEventListener('load', () => {
+  aos_init();
+});
+
+
+
+on('click', '#coffee-div-btn', function(e) {
+  e.preventDefault();
+  let element = document.getElementById('coffee-div').style.display
+  if(element == "none"){
+    displayTo("coffee-div", "block")
+  } else {
+    displayTo("coffee-div", "none")
+  }
+})
+
+on('click', '#non-coffee-div-btn', function(e) {
+  e.preventDefault();
+  let element = document.getElementById('non-coffee-div').style.display
+  if(element == "none"){
+    displayTo("non-coffee-div", "block")
+  } else {
+    displayTo("non-coffee-div", "none")
+  }
+})
+
+on('click', '#snack-div-btn', function(e) {
+  e.preventDefault();
+  let element = document.getElementById('snack-div').style.display
+  if(element == "none"){
+    displayTo("snack-div", "block")
+  } else {
+    displayTo("snack-div", "none")
+  }
+})

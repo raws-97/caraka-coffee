@@ -28,6 +28,7 @@
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/owl.carousel.css">
 			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="js/vendor/aos/aos.css">
 		</head>
 		<body>
 
@@ -38,7 +39,7 @@
 				  			<div class="col-lg-8 col-sm-4 col-8 header-top-right no-padding">
 				  				<ul>
 				  					<li>
-				  						Fri-Sat: 4pm to 11pm
+				  						Sat-Fri: 4pm to 11pm
 				  					</li>
 				  					<li>
 				  						<a href="tel:(012) 6985 236 7512">(012) 6985 236 7512</a>
@@ -118,130 +119,44 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-60 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">What kind of Coffee we serve for you</h1>
+								<h1 class="mb-10">Caraka Menu</h1>
 								<p>Who are in extremely love with eco friendly system.</p>
 							</div>
 						</div>
-					</div>						
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Cappuccino</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Americano</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Espresso</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Macchiato</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Mocha</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Coffee Latte</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Piccolo Latte</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Ristretto</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-menu">
-								<div class="title-div justify-content-between d-flex">
-									<h4>Affogato</h4>
-									<p class="price float-right">
-										$49
-									</p>
-								</div>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advance.
-								</p>								
-							</div>
-						</div>															
 					</div>
+
+					<div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+						<ul id="portfolio-flters">
+						<button data-filter="*" class="col-lg-12 genric-btn primary-border circle">All Menu</button>
+						
+						<button id="coffee-div-btn" style="margin-top: 20px;" class="col-lg-12 genric-btn primary circle arrow">COFFEE<span class="lnr lnr-arrow-right"></span></button>
+
+						<div id="coffee-div" style="display: none;" class="container">
+							<button style="margin: 5px;" data-filter=".espresso-based" class="col-lg-12 genric-btn primary-border circle">Espresso Based</button>
+							<button style="margin: 5px;" data-filter=".coffee-blend" class="col-lg-12 genric-btn primary-border circle">Coffee Blend</button>
+							<button style="margin: 5px;" data-filter=".manual-brew" class="col-lg-12 genric-btn primary-border circle">Manual Brew</button>
+						</div>
+
+						<button id="non-coffee-div-btn" style="margin-top: 20px;" class="col-lg-12 genric-btn primary circle arrow">NON COFFEE<span class="lnr lnr-arrow-right"></span></button>
+						<div id="non-coffee-div" style="display: none;" class="container">
+							<button style="margin: 5px;" data-filter=".mood-booster" class="col-lg-12 genric-btn primary-border circle">Mood Booster</button>
+							<button style="margin: 5px;" data-filter=".fruit-tea" class="col-lg-12 genric-btn primary-border circle">Fruit Tea</button>
+							<button style="margin: 5px;" data-filter=".mocktail" class="col-lg-12 genric-btn primary-border circle">Mocktail</button>
+						</div>
+
+						<button id="snack-div-btn" style="margin-top: 20px;" class="col-lg-12 genric-btn primary circle arrow">SNACK<span class="lnr lnr-arrow-right"></span></button>
+						<div id="snack-div" style="display: none;" class="container">
+							<button style="margin: 5px;" data-filter=".fried-food" class="col-lg-12 genric-btn primary-border circle">Fried Food</button>
+						</div>
+
+						
+						</ul>
+					</div> <br>
+					
+					<div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+					<div class="row" id="data-classes"></div>
+				</div>
 				</div>	
 			</section>
 			<!-- End menu Area -->
@@ -466,9 +381,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<script src="js/jquery.nice-select.min.js"></script>			
 			<script src="js/parallax.min.js"></script>	
 			<script src="js/waypoints.min.js"></script>
-			<script src="js/jquery.counterup.min.js"></script>					
+			<script src="js/jquery.counterup.min.js"></script>	
+			<script src="js/vendor/aos/aos.js"></script>
+			<script src="js/vendor/isotope-layout/isotope.pkgd.min.js"></script>			
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
+			<script src="js/custom.js"></script>
+
+			<script>
+				getDataMenu()
+			</script>
 		</body>
 	</html>
 
